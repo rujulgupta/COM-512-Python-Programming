@@ -21,3 +21,17 @@
 # Do not sort the list because the original test order matters.
 
 
+n = int(input("Enter number of tests: "))
+marks = []
+
+for i in range(n):
+    marks.append(int(input("Enter marks: ")))
+
+best = [marks[0]]
+current = [marks[0]]
+start = 1
+best_start = 1
+
+for i in range(1, n):
+    if marks[i] > marks[i - 1]:
+        current.append(marks[i])
